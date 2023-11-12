@@ -2,9 +2,10 @@
 public class Review01 {
 
     public static void main(String[] args) {
-        int price = 1111; //商品価格
-        int tax = tax(price); //商品の消費税
-        System.out.println(tax(price));
+        int price_tax_exclude = 12345; //商品価格(税抜き)
+        int tax = tax(price_tax_exclude); //商品の消費税
+        int price_tax_include = price_tax_exclude + tax; //商品価格（税込み）
+        System.out.println(price_tax_exclude + "円の商品の税込価格は" + price_tax_include +"円（消費税は" + tax + "円）です。");
 
     }
 
